@@ -69,17 +69,23 @@ public class ContaBancaria {
 		System.out.println("---------------------");
 	}
 	
+	public String exibirInfo() {
+		String resultado;
+		resultado = "Conta bancária:"+conta+"-"+dv+" ("+agencia+") Saldo: "+saldo;
+		return resultado;		
+	}
+	
 	public void depositar(double valor) {
 		saldo = saldo +valor;
 	}
 	
 	public boolean sacar(double valor) {
-		if(valor<saldo) {
-			return false;
-		}
-		else {
+		if(valor<=saldo) {
 			saldo = saldo-valor;
 			return true;
+		}
+		else {
+			return false;
 		}
 	}
 	
