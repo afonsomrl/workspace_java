@@ -24,6 +24,25 @@ public class Time {
 	}
 	
 	
+	public void setHorario(int hora, int minuto, int segundo) {
+		this.hora = hora;
+		this.minuto = minuto;
+		this.segundo = segundo;		
+	}
+	
+	public void setHorario(int hora, int minuto) {
+		this.hora = hora;
+		this.minuto = minuto;
+		this.segundo = 0;		
+	}
+	public void setHorario(int hora) {
+		this.hora = hora;
+		this.minuto = 0;
+		this.segundo = 0;		
+	}
+	
+	
+	
 	public String exibirHoraUniversal() {
 		return +hora+":"+minuto+":"+segundo;
 	}
